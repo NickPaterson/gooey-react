@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
-    "declaration": true,
+    "target": "es6",         // or a later version like es2020
+    "module": "commonjs",
+    "lib": ["dom", "es6", "dom.iterable", "scripthost"],  // Include appropriate libs
+    "allowJs": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "react",
-    "moduleResolution": "Node",
-    "outDir": "./dist-types",
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "target": "ESNext"
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"  // This setting aligns with React 17's new JSX transform
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*"
+  ]
 }
